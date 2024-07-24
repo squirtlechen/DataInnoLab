@@ -16,6 +16,7 @@ class OAuthService:
            'openid'
            ]
         self.creds = None
+        self.user_email = None
 
     def authenticate(self):
         """Authenticate and return the credentials."""
@@ -43,7 +44,8 @@ class OAuthService:
         """Print the authenticated user's info."""
         service = build('oauth2', 'v2', credentials=self.creds)
         user_info = service.userinfo().get().execute()
-        print(f"Authenticated user: {user_info['email']}")
+        self.user_email = user_info['email']
+        print(f"Authenticated user: {self.user_email}")
         
     def get_service(self, service_name, version):
         """Build and return a Google API service."""

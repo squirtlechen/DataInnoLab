@@ -47,7 +47,9 @@ class BulkMailService:
         raw_message = {'raw': base64.urlsafe_b64encode(message.as_bytes()).decode()}
         if self.check_berfore_send:
             self.preview()
-            input("Press Enter to send the email...")
+            cancel = input("Press Enter to send the email, type anything to cancel.")
+        if cancel:
+            return 'Email sending cancelled.'
         try:
             result = self.email_service.users().messages().send(userId='me', body=raw_message).execute()
             print("Email sent successfully using Gmail API.")

@@ -1,9 +1,9 @@
 mentorship_email = """
 <html>
 <body>
-<h4>{name}</h4> 
+<h4>Hi {mentee} and {mentor}</h4> 
 <p></p>
-<p>Have a good day!</p>
+<p>Thanks for joining program</p>
 <p></p>
 <p>Kind regards,</p>
 <p></p>

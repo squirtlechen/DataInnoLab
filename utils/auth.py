@@ -7,7 +7,7 @@ from googleapiclient.discovery import build
 
 class OAuthService:
     def __init__(self):
-        self.credentials_file = 'innolab_login_client_secret.json'
+        self.credentials_file = 'credentials.json'
         self.token_file = 'user_token.json'
         self.scopes =  [
            'https://www.googleapis.com/auth/spreadsheets.readonly',

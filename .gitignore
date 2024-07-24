@@ -162,3 +162,4 @@ cython_debug/
 #.idea/
 innolab_login_client_secret.json
 user_token.json
+credentials.json
